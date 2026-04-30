@@ -145,13 +145,6 @@ nav a {
 }
 
 /* THEME BUTTON */
-.theme-btn {
-    padding: 6px 12px;
-    border: 1px solid var(--text);
-    cursor: pointer;
-    background: none;
-    color: var(--text);
-}
 .project-card {
     background: var(--card);
     color: var(--cardText);
@@ -164,4 +157,32 @@ nav a {
 
 .project-card:hover {
     transform: translateY(-4px);
+}
+.skill {
+    margin-bottom: 20px;
+}
+
+.bar {
+    width: 100%;
+    height: 10px;
+    background: var(--border);
+}
+
+.fill {
+    height: 10px;
+    background: var(--accent);
+    transition: width 1s ease;
+}
+.theme-btn {
+    padding: 6px 12px;
+    border: 1px solid var(--text);
+    background: none;
+    color: var(--text);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.theme-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
 }
