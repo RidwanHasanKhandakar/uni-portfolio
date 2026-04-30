@@ -152,3 +152,16 @@ nav a {
     background: none;
     color: var(--text);
 }
+.project-card {
+    background: var(--card);
+    color: var(--cardText);
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid var(--border);
+    border-radius: 0;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+}
