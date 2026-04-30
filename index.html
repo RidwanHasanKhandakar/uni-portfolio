@@ -1,22 +1,168 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title> Rahin's Uni Portfolio</title>
-        <link rel="strylesheet" herf="css/style.css">
-    </head>
-    <body>
-        <nav>
-            <h2>Ridwan Hasan Khandakar</h2>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="courses.html">Courses</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="skills.html">Skills</a></li>
-            </ul>
-        </nav>
-        <section>
-            <h1>Welcome to my University Portfolio</h1>
-            <p>This website showcases my academic journey, projects & skills.</p>
-        </section>
-    </body>
+<head>
+    <title>Rahin | Portfolio Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <nav>
+        <h2>Rahin</h2>
+        <ul>
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="skills.html">Skills</a></li>
+        </ul>
+        <button class="theme-btn" onclick="toggleTheme()">Theme</button>
+    </nav>
+
+    <section class="container">
+
+        <!-- HERO -->
+        <div class="hero">
+            <h1>University Journey Dashboard</h1>
+            <p>Tracking my academic progress, skills, and projects in one place.</p>
+        </div>
+
+        <!-- STATS -->
+        <div class="stats-grid">
+
+            <div class="stat-card">
+                <h2>14+</h2>
+                <p>Courses Completed</p>
+            </div>
+
+            <div class="stat-card">
+                <h2>5+</h2>
+                <p>Major Projects</p>
+            </div>
+
+            <div class="stat-card">
+                <h2>8</h2>
+                <p>Semesters Covered</p>
+            </div>
+
+            <div class="stat-card">
+                <h2>8+</h2>
+                <p>Core Technologies</p>
+            </div>
+
+        </div>
+
+        <!-- HIGHLIGHTS -->
+        <h2 class="section-title">Key Highlights</h2>
+
+        <div class="highlight-card">
+            <h3> Medicine Inventory System</h3>
+            <p>IoT + Arduino + Python + Web UI integration project.</p>
+        </div>
+
+        <div class="highlight-card">
+            <h3> IntroSort Algorithm</h3>
+            <p>Hybrid sorting algorithm combining QuickSort + HeapSort + InsertionSort.</p>
+        </div>
+
+        <div class="highlight-card">
+            <h3> Paper Factory System</h3>
+            <p>JavaFX-based industrial simulation system.</p>
+        </div>
+
+        <div class="highlight-card">
+            <h3> E-Learning Platform</h3>
+            <p>Full-stack system using PHP + MySQL + JavaScript.</p>
+        </div>
+
+        <!-- TIMELINE -->
+        <h2 class="section-title">Academic Timeline</h2>
+
+        <div class="timeline">
+
+            <div class="timeline-item" onclick="toggleSemester(this)">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Autumn 2023</h3>
+                    <div class="timeline-details">
+                        <p>CSC101, CSC101 Lab</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item" onclick="toggleSemester(this)">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Spring 2024</h3>
+                    <div class="timeline-details">
+                        <p>Discrete Mathematics</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item" onclick="toggleSemester(this)">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Summer 2024</h3>
+                    <div class="timeline-details">
+                        <p>Data Structures, Lab</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item" onclick="toggleSemester(this)">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Autumn 2024</h3>
+                    <div class="timeline-details">
+                        <p>Hardware, Algorithms (First Attempt)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item" onclick="toggleSemester(this)">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Spring 2025</h3>
+                    <div class="timeline-details">
+                        <p>Algorithms, IntroSort Project, Architecture</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item" onclick="toggleSemester(this)">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Summer 2025</h3>
+                    <div class="timeline-details">
+                        <p>OOP, Paper Factory System (JavaFX)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item" onclick="toggleSemester(this)">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Autumn 2025</h3>
+                    <div class="timeline-details">
+                        <p>Finite Automata</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item" onclick="toggleSemester(this)">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Spring 2026</h3>
+                    <div class="timeline-details">
+                        <p>Microprocessor, DBMS, IoT Project, E-Learning Platform</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <script src="js/script.js"></script>
+</body>
 </html>

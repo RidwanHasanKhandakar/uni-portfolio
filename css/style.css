@@ -1,32 +1,44 @@
-body {
-    margin: 0;
-    font-family: "Segoe UI", sans-serif;
-    background: #0b0f14;
-    color: #e6e6e6;
-    line-height: 1.6;
+:root {
+    --bg: #f6f7fbe2;
+    --text: #111111;
+    --card: #000000;
+    --cardText: #ffffff;
+    --accent: #000000;
+    --border: #e5e5e5;
 }
 
-.container {
-    max-width: 1000px;
-    margin: auto;
-    padding: 40px 20px;
+/* DARK THEME */
+body.dark {
+    --bg: #0b0f14;
+    --text: #ffffff;
+    --card: #ffffff;
+    --cardText: #000000;
+    --accent: #00ffcc;
+    --border: #1f1f1f;
 }
-/*navbar*/
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    transition: 0.3s ease;
+}
+
+/* NAV */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
-    background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    background: var(--bg);
     position: sticky;
     top: 0;
-    z-index: 1000;
-    border-bottom: 1px solid #1f1f1f;
 }
 
 nav h2 {
-    color: #00ffcc;
+    margin: 0;
 }
 
 nav ul {
@@ -36,87 +48,107 @@ nav ul {
 }
 
 nav a {
-    color: #e6e6e6;
     text-decoration: none;
+    color: var(--text);
+}
+
+/* CONTAINER */
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px 20px;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* CARDS (BLACK BOX STYLE) */
+.course-card,
+.stat-card,
+.highlight-card,
+.timeline-content {
+    background: var(--card);
+    color: var(--cardText);
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 0px; /* sharp square look */
+    border: 1px solid var(--border);
     transition: 0.2s;
 }
 
-nav a:hover {
-    color: #00ffcc;
+.course-card:hover,
+.highlight-card:hover,
+.stat-card:hover {
+    transform: translateY(-3px);
 }
 
+/* HEADINGS */
+.section-title,
 .semester {
-    margin-top: 50px;
-    font-size: 20px;
-    color: #00ffcc;
-    border-left: 4px solid #00ffcc;
-    padding-left: 12px;
-    letter-spacing: 1px;
+    margin-top: 40px;
+    border-left: 4px solid var(--accent);
+    padding-left: 10px;
 }
 
-.course-card {
-    background: linear-gradient(145deg, #141a22, #0f141b);
-    padding: 18px;
-    margin: 18px 0;
-    border-radius: 14px;
-    border: 1px solid #1f2a36;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-    transition: all 0.25s ease;
+/* STATS GRID */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
 }
 
-.course-card:hover {
-    transform: translateY(-5px);
-    border-color: #00ffcc;
-    box-shadow: 0 10px 30px rgba(0,255,204,0.08);
-}
-
-.course-card h3 {
-    color: #ffffff;
-    margin-bottom: 8px;
-}
-
-.failed {
-    border-left: 4px solid red;
-}
+/* TAGS */
 .tag {
     display: inline-block;
-    padding: 4px 10px;
-    margin: 4px 5px 0 0;
+    padding: 4px 8px;
     font-size: 12px;
-    border-radius: 20px;
-    background: #1b2a33;
-    color: #00ffcc;
-    border: 1px solid #00ffcc33;
+    margin: 3px;
+    border: 1px solid var(--border);
+    color: var(--cardText);
 }
-.course-card {
+
+/* TIMELINE */
+.timeline {
+    border-left: 2px solid var(--border);
+    padding-left: 20px;
+}
+
+.timeline-item {
+    margin-bottom: 15px;
+    cursor: pointer;
+    position: relative;
+}
+
+.timeline-dot {
+    width: 10px;
+    height: 10px;
+    background: var(--accent);
+    position: absolute;
+    left: -26px;
+    top: 5px;
+    border-radius: 50%;
+}
+
+.timeline-details {
+    max-height: 0;
+    overflow: hidden;
     opacity: 0;
-    transform: translateY(20px);
-    animation: fadeIn 0.5s ease forwards;
+    transition: 0.3s ease;
 }
 
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-.page-title {
-    font-size: 32px;
-    margin-bottom: 20px;
-    color: #00ffcc;
+.timeline-item.active .timeline-details {
+    max-height: 100px;
+    opacity: 1;
 }
 
-.tag-group {
-    margin-top: 10px;
-}
-
-.tag {
-    display: inline-block;
-    padding: 5px 10px;
-    margin: 4px 5px 0 0;
-    font-size: 12px;
-    border-radius: 20px;
-    background: #1b2a33;
-    color: #00ffcc;
-    border: 1px solid #00ffcc33;
+/* THEME BUTTON */
+.theme-btn {
+    padding: 6px 12px;
+    border: 1px solid var(--text);
+    cursor: pointer;
+    background: none;
+    color: var(--text);
 }
