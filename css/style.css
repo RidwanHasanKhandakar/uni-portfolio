@@ -186,3 +186,17 @@ nav a {
     border-color: var(--accent);
     color: var(--accent);
 }
+.credit-progress {
+    margin-top: 20px;
+}
+
+.credit-progress p {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.fill {
+    height: 10px;
+    background: var(--accent);
+    width: 0;
+    transition: width 1.2s ease-in-out;
+}
