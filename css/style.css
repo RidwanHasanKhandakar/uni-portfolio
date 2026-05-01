@@ -200,3 +200,6 @@ nav a {
     width: 0;
     transition: width 1.2s ease-in-out;
 }
+#semester-panel {
+    margin-top: 15px;
+}
