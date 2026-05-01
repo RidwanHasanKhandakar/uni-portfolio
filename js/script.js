@@ -87,11 +87,7 @@ function loadSemester(key) {
     const data = semesterData[key];
     const panel = document.getElementById("semester-panel");
 
-    // safety check
-    if (!data || !panel) {
-        console.warn("Semester data or panel not found:", key);
-        return;
-    }
+    if (!data || !panel) return;
 
     panel.innerHTML = `
         <h2>${data.title}</h2>
@@ -100,6 +96,14 @@ function loadSemester(key) {
         <p><strong>Skills:</strong> ${data.skills}</p>
         <p><strong>Reflection:</strong> ${data.reflection}</p>
     `;
+
+    // highlight active card
+    document.querySelectorAll(".semester-card").forEach(card => {
+        card.classList.remove("active");
+        if (card.innerText === data.title) {
+            card.classList.add("active");
+        }
+    });
 }
 
 /* =========================

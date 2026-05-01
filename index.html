@@ -56,8 +56,32 @@
             <div class="fill" id="credit-fill"></div>
         </div>
     </div>
+       <!-- SEMESTER CARDS -->
+<h2 class="section-title">Academic Timeline</h2>
 
-        <!-- HIGHLIGHTS -->
+<div class="semester-grid">
+
+    <div class="semester-card" onclick="loadSemester('autumn2023')">Autumn 2023</div>
+    <div class="semester-card" onclick="loadSemester('spring2024')">Spring 2024</div>
+    <div class="semester-card" onclick="loadSemester('summer2024')">Summer 2024</div>
+
+    <div class="semester-card" onclick="loadSemester('autumn2024')">Autumn 2024</div>
+    <div class="semester-card" onclick="loadSemester('spring2025')">Spring 2025</div>
+    <div class="semester-card" onclick="loadSemester('summer2025')">Summer 2025</div>
+
+    <div class="semester-card" onclick="loadSemester('autumn2025')">Autumn 2025</div>
+    <div class="semester-card" onclick="loadSemester('spring2026')">Spring 2026</div>
+
+</div>
+
+<!-- SEMESTER DETAILS PANEL -->
+<h2 class="section-title">Semester Details</h2>
+
+<div id="semester-panel" class="course-card">
+    <p>Click a semester to view details</p>
+</div>
+
+<!-- HIGHLIGHTS -->
         <h2 class="section-title">Key Highlights</h2>
 
         <div class="highlight-card">
@@ -78,97 +102,6 @@
         <div class="highlight-card">
             <h3> E-Learning Platform</h3>
             <p>Full-stack system using PHP + MySQL + JavaScript.</p>
-        </div>
-
-        <!-- TIMELINE -->
-        <h2 class="section-title">Academic Timeline</h2>
-        <h2 class="section-title">Semester Details</h2>
-
-        <div id="semester-panel" class="course-card">
-            <p>Click a semester to view details</p>
-        </div>
-        <div class="timeline">
-
-            <div class="timeline-item" onclick="loadSemester('autumn2023')">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3>Autumn 2023</h3>
-                    <div class="timeline-details">
-                        <p>CSC101, CSC101 Lab</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="timeline-item" onclick="loadSemester('spring2024')">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3>Spring 2024</h3>
-                    <div class="timeline-details">
-                        <p>Discrete Mathematics</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="timeline-item" onclick="loadSemester('summer2024')">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3>Summer 2024</h3>
-                    <div class="timeline-details">
-                        <p>Data Structures, Lab</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="timeline-item" onclick="loadSemester('autumn2024')">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3>Autumn 2024</h3>
-                    <div class="timeline-details">
-                        <p>Hardware, Algorithms (First Attempt)</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="timeline-item" onclick="loadSemester('spring2025')">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3>Spring 2025</h3>
-                    <div class="timeline-details">
-                        <p>Algorithms, IntroSort Project, Architecture</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="timeline-item" onclick="loadSemester('summer2025')">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3>Summer 2025</h3>
-                    <div class="timeline-details">
-                        <p>OOP, Paper Factory System (JavaFX)</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="timeline-item" onclick="loadSemester('autumn2025')">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3>Autumn 2025</h3>
-                    <div class="timeline-details">
-                        <p>Finite Automata</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="timeline-item" onclick="loadSemester('spring2026')">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3>Spring 2026</h3>
-                    <div class="timeline-details">
-                        <p>Microprocessor, DBMS, IoT Project, E-Learning Platform</p>
-                    </div>
-                </div>
-            </div>
-
         </div>
 
     </section>

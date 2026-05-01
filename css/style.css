@@ -203,3 +203,37 @@ nav a {
 #semester-panel {
     margin-top: 15px;
 }
+/* =========================
+   SEMESTER GRID
+========================= */
+.semester-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 12px;
+    margin-top: 20px;
+}
+
+/* =========================
+   SEMESTER CARD
+========================= */
+.semester-card {
+    padding: 14px;
+    border: 1px solid var(--border);
+    background: var(--card);
+    color: var(--cardText);
+    text-align: center;
+    cursor: pointer;
+    transition: 0.2s ease;
+    user-select: none;
+}
+
+.semester-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent);
+}
+
+/* ACTIVE STATE */
+.semester-card.active {
+    border: 2px solid var(--accent);
+    box-shadow: 0 0 10px rgba(0,255,204,0.2);
+}
